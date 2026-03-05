@@ -182,15 +182,14 @@ export default function Home() {
                 <section className="py-16 md:py-32 relative overflow-hidden">
                     <div className="container mx-auto px-4 md:px-8">
 
-                        <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-24 gap-8 relative z-10">
+                        <div className="flex flex-col md:flex-row justify-center md:text-center items-start mb-12 md:mb-24 gap-8 relative z-10">
                             <div className="max-w-xl">
-                                <span className="text-sm font-bold text-black/40 uppercase tracking-widest mb-6 block">Cara Kerja</span>
                                 <h2 className="text-3xl md:text-6xl font-bold tracking-tight leading-[1.1]">
-                                    Dari layar ke <br />
-                                    cangkir kopi <br />
+                                    From screen to <br />
+                                    Steaming cup <br />
                                     <span className="relative inline-block">
-                                        <span className="relative z-10">dalam 3 langkah.</span>
-                                        <span className="absolute bottom-2 left-0 w-full h-3 bg-accent/40 rounded-full -z-0"></span>
+                                        <span className="relative z-10">in 3 steps.</span>
+                                        <span className="absolute -bottom-4 left-0 w-24 h-2 w-full bg-accent/60 rounded-full pointer-events-none"></span>
                                     </span>
                                 </h2>
                             </div>
@@ -198,7 +197,7 @@ export default function Home() {
 
                         {/* Mobile: Horizontal Scroll | Desktop: Grid */}
                         <div className="relative">
-                            <div className="flex overflow-x-auto snap-x snap-mandatory pb-8 gap-4 md:grid md:grid-cols-3 md:gap-12 md:pb-0 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 relative z-0">
+                            <div className="flex overflow-x-auto snap-x snap-mandatory pb-8 gap-4 md:grid md:grid-cols-3 md:gap-12 md:pb-12 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0 relative z-0">
                                 {/* Decorative Line (Desktop Only) */}
                                 <div className="hidden md:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-black/5 border-t border-dashed border-black/20 -z-10"></div>
 
@@ -239,12 +238,15 @@ export default function Home() {
                 <section className="py-16 md:py-32 relative">
                     <div className="container mx-auto px-4 md:px-8">
 
-                        {/* Refined Section Header - Split Layout */}
-                        <div className="mb-12 md:mb-20 border-b border-black pb-8">
+                        <div className="mb-12 md:mb-20 border-b border-black pb-8 relative">
                             <div className="flex flex-col md:flex-row justify-between items-end gap-6">
-                                <h2 className="text-3xl md:text-6xl font-bold tracking-tight text-black leading-tight text-left">
-                                    Ekosistem Sosial<br />Yang Nyata.
-                                </h2>
+                                <div className="relative">
+                                    <h2 className="text-3xl md:text-6xl font-bold tracking-tight text-black leading-tight text-right md:text-left">
+                                        Ekosistem Sosial<br />Yang Nyata.
+                                    </h2>
+                                    {/* Mobile Only Underline */}
+                                    <div className="absolute -bottom-4 right-0 w-32 h-2 bg-accent/60 rounded-full md:hidden"></div>
+                                </div>
                                 <p className="text-lg font-medium leading-relaxed max-w-md text-black/80 md:text-right">
                                     <span className="block text-sm font-regular uppercase tracking-widest text-black mb-2">Filosofi Fitur</span>
                                     Interaksi dari layar smartphone kembali ke meja kopi. Aman, spontan, dan bermakna.
@@ -363,18 +365,14 @@ export default function Home() {
                 {/* EVENTS PREVIEW */}
                 <section className="py-20 md:py-40 bg-white border-t border-black/5">
                     <div className="container mx-auto px-4 md:px-8">
-                        <div className="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-16 gap-6">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6">
                             <div className="max-w-2xl">
-                                <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 bg-white border border-black/5 rounded-full text-sm font-bold uppercase tracking-widest text-black shadow-sm">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
-                                    Komunitas
-                                </div>
-                                <h2 className="text-3xl md:text-5xl font-bold leading-[1.05] tracking-tight">
+                                <h2 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight">
                                     Orang beneran. <br /> Kopi beneran.
                                 </h2>
                             </div>
-                            <div className="flex gap-3 pb-2">
-                                <Button variant="outline" className="h-12 px-6 bg-white hover:bg-black hover:text-white border-none shadow-md shadow-black/5">Lihat Semua</Button>
+                            <div className="flex-shrink-0 self-end">
+                                <Button variant="outline" className="h-8 md:h-10 px-2 bg-white hover:bg-black hover:text-white border border-black/5 shadow-md shadow-black/5 text-sm md:text-base rounded-full font-medium">Lihat Semua</Button>
                             </div>
                         </div>
 
@@ -453,7 +451,7 @@ export default function Home() {
                                 Gabung komunitas yang menghargai koneksi tatap muka dibanding 'likes' digital.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                                <Button variant="primary" size="lg" className="h-16 px-10 text-xl md:h-20 md:px-16 md:text-2xl bg-white text-[#000000] hover:bg-white/90 hover:-translate-y-1 transition-transform duration-300 rounded-full w-full sm:w-auto font-bold shadow-2xl">Gabung Waitlist</Button>
+                                <Button variant="primary" size="lg" className="h-16 px-10 text-xl md:h-20 md:px-16 md:text-2xl bg-white text-gray-900 hover:bg-white/90 hover:-translate-y-1 transition-transform duration-300 rounded-full w-full sm:w-auto font-bold shadow-2xl">Gabung Waitlist</Button>
                             </div>
                         </div>
                     </div>
@@ -467,7 +465,7 @@ export default function Home() {
                             <button className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center active:scale-90 transition-transform">
                                 <UserCircle className="w-5 h-5" />
                             </button>
-                            <Button variant="primary" size="sm" className="bg-white text-black hover:bg-white/90 rounded-full px-6 h-10 font-bold" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                            <Button variant="primary" size="sm" className="bg-white text-gray-900 hover:bg-white/90 rounded-full px-6 h-10 font-bold" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                                 Join
                             </Button>
                         </div>
